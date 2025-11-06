@@ -1,9 +1,11 @@
 import os
 from PIL import Image
 
+
+
 # Caminho da pasta com as imagens
-pasta_imagens = "../image"   # altere conforme necessário
-arquivo_saida = "todas_imagens.pdf"  # nome do PDF final
+pasta_imagens = "../imagegroup/pasta_01/04-fv"   # altere conforme necessário
+arquivo_saida = "../imagegroup/pasta_01/04-fv/contrato_completo.pdf"  # nome do PDF final
 
 # Lista todos os arquivos JPG da pasta (ordem alfabética)
 arquivos = sorted(
