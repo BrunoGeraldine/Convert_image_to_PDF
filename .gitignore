@@ -12,6 +12,7 @@ __pycache__/
 *.svg
 *.pdf
 *.zip
+*.ZIP
 
 # Distribution / packaging
 .Python
