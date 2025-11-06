@@ -1,25 +1,25 @@
-# Resumo dos Scripts
+# Scripts Summary
 
 ## 📄 app.py
-Conversor básico de imagens para PDF.
-Processa todas as imagens JPG/JPEG da pasta 'image'.
-Cria uma subpasta 'pdfs' para armazenar os resultados.
-Cada imagem se torna um PDF individual com o mesmo nome.
+Basic image to PDF converter.
+Processes all JPG/JPEG images from the 'image' folder.
+Creates a 'pdfs' subfolder to store the results.
+Each image becomes an individual PDF with the same name.
 
-## 📄 agrupa-cada.py
-Processador inteligente com regras por sufixo de pasta.
-Analisa pastas '-uc' para criar PDFs individuais.
-Analisa pastas '-fv' para criar um PDF único por pasta.
-Mantém a organização hierárquica da pasta 'imagegroup'.
+## 📄 merge_onlyone.py
+Intelligent processor with folder suffix rules.
+Analyzes '-uc' folders to create individual PDFs.
+Analyzes '-fv' folders to create a single PDF per folder.
+Maintains the hierarchical organization of the 'imagegroup' folder.
 
-## 📄 agrupa-pdf.py
-Unificador de arquivos PDF existentes.
-Combina todos os PDFs de uma pasta específica.
-Cria um novo PDF com o nome da pasta.
-Ignora o arquivo final para evitar loops infinitos.
+## 📄 merge_pdf.py
+Existing PDF files unifier.
+Combines all PDFs from a specific folder.
+Creates a new PDF with the folder name.
+Ignores the final file to avoid infinite loops.
 
-## 📄 agrupa-todos.py
-Agrupador de imagens em PDF único.
-Processa todas as imagens JPG de uma pasta específica.
-Combina todas em um único arquivo 'contrato_completo.pdf'.
-Mantém a ordem alfabética das imagens no documento final.
+## 📄 merge_all.py
+Single PDF image grouper.
+Processes all JPG images from a specific folder.
+Combines all into a single 'contrato_completo.pdf' file.
+Maintains alphabetical order of images in the final document.

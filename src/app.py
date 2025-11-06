@@ -1,30 +1,30 @@
 import os
 from PIL import Image
 
-# Caminho da pasta com as imagens
-pasta_imagens = "../image"   # altere conforme necessário
+# Path to the images folder
+images_folder = "../image"   # modify as needed
 
-# Cria uma pasta de saída (caso não exista)
-pasta_saida = os.path.join(pasta_imagens, "pdfs")
-os.makedirs(pasta_saida, exist_ok=True)
+# Create output folder (if it doesn't exist)
+output_folder = os.path.join(images_folder, "pdfs")
+os.makedirs(output_folder, exist_ok=True)
 
-# Percorre todos os arquivos da pasta
-for arquivo in os.listdir(pasta_imagens):
-    if arquivo.lower().endswith((".jpg", ".jpeg")):
-        caminho_imagem = os.path.join(pasta_imagens, arquivo)
+# Loop through all files in the folder
+for file in os.listdir(images_folder):
+    if file.lower().endswith((".jpg", ".jpeg")):
+        image_path = os.path.join(images_folder, file)
         
-        # Abre a imagem
-        with Image.open(caminho_imagem) as img:
-            # Converte para modo RGB (necessário para PDF)
+        # Open the image
+        with Image.open(image_path) as img:
+            # Convert to RGB mode (required for PDF)
             if img.mode in ("RGBA", "P"):
                 img = img.convert("RGB")
             
-            # Define o nome do arquivo PDF
-            nome_pdf = os.path.splitext(arquivo)[0] + ".pdf"
-            caminho_pdf = os.path.join(pasta_saida, nome_pdf)
+            # Define the PDF filename
+            pdf_name = os.path.splitext(file)[0] + ".pdf"
+            pdf_path = os.path.join(output_folder, pdf_name)
             
-            # Salva como PDF
-            img.save(caminho_pdf, "PDF", resolution=100.0)
-            print(f"✅ {arquivo} convertido para {nome_pdf}")
+            # Save as PDF
+            img.save(pdf_path, "PDF", resolution=100.0)
+            print(f"✅ {file} converted to {pdf_name}")
 
-print("\nConversão concluída! Os PDFs estão na pasta 'pdfs'.")
+print("\nConversion completed! PDFs are in the 'pdfs' folder.")
